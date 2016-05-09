@@ -1,7 +1,7 @@
-Dog = Backbone.Model.extent({
+Dog = Backbone.Model.extend({
   initialize: function(){
     this.view = new DogView({model: this});
-    this.on('change: name', function(){
+    this.on('change:name', function(){
       this.view.render();
     });
   }
